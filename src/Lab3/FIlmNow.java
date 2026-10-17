@@ -1,10 +1,12 @@
 package Lab3;
 
+import java.util.Scanner;
+
 public class FIlmNow {
     private Filme[] filmes = new Filme[100];
     private Filme[] hotList = new Filme[10];
 
-    public String adicionarFlme(int[] posFilm, int lancamento, String local){
+    public String adicionarFlme(int posFilm, int lancamento, String local){
         return "";
     }
 
