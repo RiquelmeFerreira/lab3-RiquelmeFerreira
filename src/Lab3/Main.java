@@ -10,10 +10,16 @@ public class Main {
             System.out.print("opção> ");
             String opcao = sc.nextLine();
 
-            if (opcao == "S") {
+            if (opcao.equals("S")) {
                 break;
-            } else if (opcao != "A" && opcao != "M" && opcao != "D" && opcao != "S") {
+
+            } else if (!opcao.equals("A") && !opcao.equals("M") && !opcao.equals("D") && !opcao.equals("S")) {
                 System.out.println("OPÇÃO INVÁLIDA!\n");
+
+            } else if (opcao.equals("A")) {
+                FIlmNow saida = new FIlmNow();
+                saida.adicionarFlme();
+                System.out.print(saida);
             }
         }
     }
