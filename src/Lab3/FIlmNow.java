@@ -13,6 +13,7 @@ public class FIlmNow {
 
         System.out.print("nome> ");
         String nome = sc.nextLine();
+        sc.nextLine();
 
         System.out.print("Lançamento> ");
         int ano = sc.nextInt();
@@ -22,7 +23,8 @@ public class FIlmNow {
         String local = sc.nextLine();
         filmes[posicao] = new Filme(nome, ano, local);
 
-        return "FILME ADICIONADO";
+
+        return "FILME ADICIONADO\n";
     }
 
     public String detalharFilme(){

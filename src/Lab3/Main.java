@@ -6,7 +6,8 @@ public class Main {
     public static void main(String[] args){
         while(true) {
             Scanner sc = new Scanner(System.in);
-            System.out.println("(A)Adicionar filme\n(M)Mostrar todos\n(D)Detalhar filme\n(S)Sair\n");
+            System.out.print("(A)Adicionar filme\n(M)Mostrar todos\n(D)Detalhar filme\n(S)Sair\n");
+            System.out.println();
             System.out.print("opção> ");
             String opcao = sc.nextLine();
 
@@ -18,8 +19,7 @@ public class Main {
 
             } else if (opcao.equals("A")) {
                 FIlmNow saida = new FIlmNow();
-                saida.adicionarFlme();
-                System.out.print(saida);
+                System.out.print(saida.adicionarFlme());
             }
         }
     }
