@@ -1,10 +1,10 @@
 package Lab3;
 
 public class Filme {
-    public String nome;
+    private String nome;
     private int lancamento;
     private String local;
-    private int posicao;
+    //private int posicao;
     private boolean hot;
 
     public Filme(String nome, int lancamento, String local) {
@@ -33,9 +33,9 @@ public class Filme {
         this.hot = hot;
     }
 
-    public boolean equals(int ano) {
-        return true;
-    }
+    //public boolean equals(int ano) {
+       // return false;
+    //}
 
     @Override
     public String toString() {

@@ -6,8 +6,10 @@ public class FilmNow {
     private Filme[] filmes = new Filme[100];
     private Filme[] hotList = new Filme[10];
 
+    Scanner sc = new Scanner(System.in);
+
     public String adicionarFilme() {
-        Scanner sc = new Scanner(System.in);
+        //Scanner sc = new Scanner(System.in);
         System.out.print("posição> ");
         int posicao = sc.nextInt();
 
@@ -48,8 +50,8 @@ public class FilmNow {
         if (pos < 1 || pos > filmes.length || filmes[pos-1] == null){
             return "POSIÇÃO INVÁLIDA\n\n";
         }
-        return filmes[pos].getNome() + ", " + filmes[pos].getLancamento() +
-                "\n" + filmes[pos].getLocal();
+        return "\n" + filmes[pos-1].getNome() + ", " + filmes[pos-1].getLancamento() +
+                "\n" + filmes[pos-1].getLocal()+"\n\n";
     }
 
     public String mostrarTodos() {
@@ -62,14 +64,29 @@ public class FilmNow {
         return saida;
     }
 
-    public String adicionarHot (Filme[]filme,int posHot){
+    public String atribuirHot (){
+        System.out.print("Filme> ");
+        int filme = sc.nextInt();
+        System.out.print("Posicao> ");
+        int posHot = sc.nextInt();
+
+        if (posHot >= 1 || posHot <= 10){
+            return "ADICIONADO À HOTLIST NA POSIÇÃO " + posHot + "!";
+        }
         return "";
     }
 
-    public String exibirHotList (Filme[]filme,int posHot){
+    public String exibirHotList (){
+        String saida = "";
+        for (int i = 0; i < hotList.length; i++){
+            if (hotList[i] != null){
+                saida += (i+1) + hotList[i].getNome() + ", " + hotList[i].getLancamento();
+            }
+            return saida;
+        }
         return "";
     }
-    public void removerHot ( int[] posicao){
+    public void removerHot (){
 
     }
 }
