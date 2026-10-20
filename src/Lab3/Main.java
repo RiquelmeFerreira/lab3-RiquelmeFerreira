@@ -18,9 +18,18 @@ public class Main {
                 System.out.println("OPÇÃO INVÁLIDA!\n");
 
             } else if (opcao.equals("A")) {
-                FIlmNow saida = new FIlmNow();
-                System.out.print(saida.adicionarFlme());
+                FilmNow s1 = new FilmNow();
+                System.out.print(s1.adicionarFilme());
+
+            } else if (opcao.equals("D")){
+                FilmNow s2 = new FilmNow();
+                System.out.print(s2.detalharFilme());
+
+            } else if (opcao.equals("M")){
+                FilmNow s3 = new FilmNow();
+                System.out.println(s3.mostrarTodos());
             }
+
         }
     }
 }
